@@ -1,8 +1,7 @@
 # Данный раздел создан для практики работы с JSON
 
 ## [JSON Schema](https://json-schema.org/)
-_Описание структуры JSON файла_
-
+_Описание структуры JSON файла_  
 Пример JSON Schema
 ```
 {
@@ -75,22 +74,21 @@ _Написание путей до необходимых объектов вн
 |()| script expression, using the underlying script engine.|
 
 Примеры использования:
-1. Select the document node
-
+1. Select the document node  
 ```$.```
-
-2. Select the 'employees' element
-
+2. Select the 'employees' element  
 ```$.employees```
-
-3. Select all 'employee' elements that are direct children of the 'employees' element
-
+3. Select all 'employee' elements that are direct children of the 'employees' element  
 ```$.employees.employee```
-
-4. Select all 'id' elements regardless of their positions in the document
-
+4. Select all 'id' elements regardless of their positions in the document  
 ```$.employees.employee['*'].id```
-
-6. Select the 'id' attributes of the 'employee' elements with their positions in the document
-
+6. Select the 'id' attributes of the 'employee' elements with their positions in the document  
 ```$.employees.employee[1].id```
+
+## Внешние материалы:
+[1] [JSON Path tester](https://codebeautify.org/jsonpath-tester) - утилита для проверки составленных JSON Path  
+[2] [Официальная документация JSON Schema](https://json-schema.org/)  
+[3] [Инструкция по составлению от MongoDB](https://www.mongodb.com/basics/json-schema-examples)  
+[4] Статья: [JSON Schema. Быть или не быть?](https://habr.com/ru/post/495766/)  
+[5] Статья: [https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda)
+
