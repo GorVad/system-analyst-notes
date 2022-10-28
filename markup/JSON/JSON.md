@@ -103,13 +103,13 @@ Usage examples:
 
 ## Sources
 ### Web
-1. [JSON.org](https://www.json.org/json-ru.html)  
-2. [W3School.JSON](https://www.w3schools.com/js/js_json_intro.asp)   
-3. [Официальная документация JSON Schema](https://json-schema.org/)  
+1. [JSON.org](https://www.json.org/json-ru.html) [eng/ru]
+2. [W3School.JSON](https://www.w3schools.com/js/js_json_intro.asp) [eng]
+3. [JSON Schema](https://json-schema.org/)[eng]
 ### Articles
-1. [MongoDB. JSON Schema examples](https://www.mongodb.com/basics/json-schema-examples)  
-2. [JSON Schema. Быть или не быть?](https://habr.com/ru/post/495766/)  
-3. [Introduction to JSON Schema](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda)
+1. [MongoDB. JSON Schema examples](https://www.mongodb.com/basics/json-schema-examples) [eng]
+2. [JSON Schema. Быть или не быть?](https://habr.com/ru/post/495766/) [ru]
+3. [Introduction to JSON Schema](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda) [eng]
 ### Tool
 1. [JSON Path tester](https://codebeautify.org/jsonpath-tester)
 2. [JSON Fixer](https://codebeautify.org/json-fixer)
