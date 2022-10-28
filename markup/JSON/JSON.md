@@ -107,9 +107,9 @@ Usage examples:
 2. [W3School.JSON](https://www.w3schools.com/js/js_json_intro.asp)   
 3. [Официальная документация JSON Schema](https://json-schema.org/)  
 ### Articles
-1. [Инструкция по составлению от MongoDB](https://www.mongodb.com/basics/json-schema-examples)  
+1. [MongoDB. JSON Schema examples](https://www.mongodb.com/basics/json-schema-examples)  
 2. [JSON Schema. Быть или не быть?](https://habr.com/ru/post/495766/)  
-3. [https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda)
+3. [Introduction to JSON Schema](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda)
 ### Tool
 1. [JSON Path tester](https://codebeautify.org/jsonpath-tester)
 2. [JSON Fixer](https://codebeautify.org/json-fixer)
