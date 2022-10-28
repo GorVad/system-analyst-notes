@@ -1,8 +1,24 @@
-# Данный раздел создан для практики работы с JSON
+# JSON
+
+## What is JSON?
+- JSON stands for JavaScript Object Notation
+- JSON is a lightweight data-interchange format
+- JSON is plain text written in JavaScript object notation
+- JSON is used to send data between computers
+ -JSON is language independent
+
+## Why Use JSON?
+The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.  
+Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.  
+JavaScript has a built in function for converting JSON strings into JavaScript objects:  
+```JSON.parse()```  
+JavaScript also has a built in function for converting an object into a JSON string:  
+```JSON.stringify()```
 
 ## [JSON Schema](https://json-schema.org/)
-_Описание структуры JSON файла_  
-Пример JSON Schema
+_JSON Schema is a vocabulary that allows you to annotate and validate JSON documents._  
+
+JSON Schema example
 ```
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -46,7 +62,7 @@ _Описание структуры JSON файла_
     }
 }
 ```
-Используемые в примере команды:
+Comands used in the example above:
 - **$schema:** States that this schema complies with v4 of the IETF standard
 - **$id:** Defines the base URI to resolve other URI references within the schema.
 - **title:** Describes the intent of the schema.
@@ -60,7 +76,7 @@ _Описание структуры JSON файла_
 - **required:** Lists the keys that are required and mandatory.
 
 ## JSON Path
-_Написание путей до необходимых объектов внутри JSON_
+_JSONPath is query language that provides opportunity to get the value of needed attribute in the JSON file_
 
 |JSONPath| Usage|
 |------------|-----------|
@@ -73,7 +89,7 @@ _Написание путей до необходимых объектов вн
 |?()| applies a filter (script) expression.|
 |()| script expression, using the underlying script engine.|
 
-Примеры использования:
+Usage examples:
 1. Select the document node  
 ```$.```
 2. Select the 'employees' element  
@@ -85,10 +101,18 @@ _Написание путей до необходимых объектов вн
 6. Select the 'id' attributes of the 'employee' elements with their positions in the document  
 ```$.employees.employee[1].id```
 
-## Внешние материалы:
-[1] [JSON Path tester](https://codebeautify.org/jsonpath-tester) - утилита для проверки составленных JSON Path  
-[2] [Официальная документация JSON Schema](https://json-schema.org/)  
-[3] [Инструкция по составлению от MongoDB](https://www.mongodb.com/basics/json-schema-examples)  
-[4] Статья: [JSON Schema. Быть или не быть?](https://habr.com/ru/post/495766/)  
-[5] Статья: [https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda)
+## Sources
+### Web
+1. [JSON.org](https://www.json.org/json-ru.html)  
+2. [W3School.JSON](https://www.w3schools.com/js/js_json_intro.asp)   
+3. [Официальная документация JSON Schema](https://json-schema.org/)  
+### Articles
+1. [Инструкция по составлению от MongoDB](https://www.mongodb.com/basics/json-schema-examples)  
+2. [JSON Schema. Быть или не быть?](https://habr.com/ru/post/495766/)  
+3. [https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda](https://medium.com/swlh/an-introduction-to-json-schema-8eaea643fcda)
+### Tool
+1. [JSON Path tester](https://codebeautify.org/jsonpath-tester)
+2. [JSON Fixer](https://codebeautify.org/json-fixer)
+3. [JSON Schema generator](https://www.liquid-technologies.com/online-json-to-schema-converter)
+4. [Random JSON data generator](https://codebeautify.org/json-generator)
 
