@@ -1,26 +1,6 @@
 # system-analyst-notes
 Основной идеей создания данного репозитория является формирование перечня книг/статей/задачек, которые призваны помочь в развитии в профессии системного аналитика.
 
-## Оглавление
-- [Общие материалы](https://github.com/GorVad/system-analyst-notes/edit/main/README.md#общие-материалы)
-  - [Книги](https://github.com/GorVad/system-analyst-notes/edit/main/README.md#книги)
-  - [Статьи](https://github.com/GorVad/system-analyst-notes/edit/main/README.md#статьи)
-- [Интеграция](https://github.com/GorVad/system-analyst-notes/edit/main/README.md#интеграция)
-  - [Языки разметки](https://github.com/GorVad/system-analyst-notes/edit/main/README.md#языки-разметки)
-    - [JSON](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#json)
-    - [XML](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#xml)
-    - [YAML](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#yaml)
-  - [Межсервисное взаимодействие](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#межсервисное-взаимодействие)
-    - [REST](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#rest)
-    - [SOAP](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#soap)
-    - [GraphQL](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#graphql)
-    - [RPC](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#rpc)
-    - [gRPC](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#grpc)
-  - [Протоколы передачи данных](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#протоколы-передачи-данных)
-    - [HTTP](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#http)
-    - [FTP](https://github.com/GorVad/system-analyst-notes/blob/main/README.md#ftp)
-
-
 ## Общие материалы
 ### Книги
 1. Карл Вигерс и Джой Битти "Разработка требований к программному обеспечению"
