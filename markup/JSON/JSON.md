@@ -78,16 +78,16 @@ Comands used in the example above:
 ## JSON Path
 _JSONPath is query language that provides opportunity to get the value of needed attribute in the JSON file_
 
-|JSONPath| Usage|
-|------------|-----------|
-|$| the root object/element|
-|@| the current object/element|
-|. or []| child operator|
-|..| recursive descent. JSONPath borrows this syntax from E4X.|
-|*| wildcard. All objects/elements regardless their names.|
-|[]| 	subscript operator. XPath uses it to iterate over element collections and for predicates. In Javascript and JSON it is the native array operator.|
-|?()| applies a filter (script) expression.|
-|()| script expression, using the underlying script engine.|
+| JSONPath Expression | Usage|
+|---------------------|-----------|
+| $                   | the root object/element|
+| @                   | the current object/element|
+| . or []             | child operator|
+| ..                  | recursive descent. JSONPath borrows this syntax from E4X.|
+| *                   | wildcard. All objects/elements regardless their names.|
+| []                  | 	subscript operator. XPath uses it to iterate over element collections and for predicates. In Javascript and JSON it is the native array operator.|
+| ?()                 | applies a filter (script) expression.|
+| ()                  | script expression, using the underlying script engine.|
 
 Usage examples:
 1. Select the document node  
