@@ -56,14 +56,14 @@ All Xpath examples below based on XML example in _"What is XML"_
 **Selecting Nodes**  
 XPath uses path expressions to select nodes in an XML document. The node is selected by following a path or steps. The most useful path expressions are listed below:
 
-|XPath Expression| Usage|
-|---------------------|-----------|
-|nodename|	Selects all nodes with the name "nodename"|
-|/|	Selects from the root node|
-|//|	Selects nodes in the document from the current node that match the selection no matter where they are|
-|.	|Selects the current node|
-|..	|Selects the parent of the current node|
-|@|	Selects attributes|
+|XPath Expression| Usage                                                                                                  |
+|---|--------------------------------------------------------------------------------------------------------|
+|nodename| 	Selects all nodes with the name "nodename"                                                            |
+|/| 	Selects from the root node                                                                            |
+|//| 	Selects nodes in the document from the current node that match the selection no matter where they are |
+|.	| Selects the current node                                                                               |
+|..	| Selects the parent of the current node                                                                 |
+|@| 	Selects attributes                                                                                    |
 
 In the table below we have listed some path expressions and the result of the expressions:
 
@@ -118,6 +118,9 @@ In the table below we have listed some path expressions and the result of the ex
 | //book/title           | //book/price	Selects all the title AND price elements of all book elements|
 | //title                | //price	Selects all the title AND price elements in the document|
 |  /bookstore/book/title | //price	Selects all the title elements of the book element of the bookstore element AND all the price elements in the document|
+
+Xpath examples:
+
 
 ## Sources
 ### Web
