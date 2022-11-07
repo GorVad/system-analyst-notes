@@ -24,6 +24,42 @@ Only [XML](https://github.com/GorVad/system-data-analyst-notes/blob/main/markup/
 - The Fault element (Optional)
 ![img.png](https://github.com/GorVad/system-data-analyst-notes/blob/main/integration/API/API%20img/soap_structure.png)
 
+## Message example
+**SOAP Message Embedded in HTTP Request**
+````
+POST /StockQuote HTTP/1.1
+Host: www.stockquoteserver.com
+Content-Type: text/xml; charset="utf-8"
+Content-Length: nnnn
+SOAPAction: "Some-URI"
+
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+       <m:GetLastTradePrice xmlns:m="Some-URI">
+           <symbol>DIS</symbol>
+       </m:GetLastTradePrice>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+````
+**SOAP Message Embedded in HTTP Response**
+````
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset="utf-8"
+Content-Length: nnnn
+
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <SOAP-ENV:Body>
+       <m:GetLastTradePriceResponse xmlns:m="Some-URI">
+           <Price>34.5</Price>
+       </m:GetLastTradePriceResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+````
+
 # WSDL
 ## What is WSDL?
 Web Services Description Language (WSDL) is an XML-based file that basically tells the client application what the web service does. The WSDL file is used to describe in a nutshell what the web service does and gives the client all the information required to connect to the web service and use all the functionality provided by the web service.
@@ -103,6 +139,7 @@ Web Services Description Language (WSDL) is an XML-based file that basically tel
 ### Web
 1. [W3School: SOAP](https://www.w3schools.com/xml/xml_soap.asp) [eng]
 2. [W3School: WSDL](https://www.w3schools.com/xml/xml_wsdl.asp) [eng]
+3. [W3C: Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) [eng]
 ### Articles
 1. [Guru99: What is SOAP?](https://www.guru99.com/soap-simple-object-access-protocol.html) [eng]
 2. [Guru99L WSDL](https://www.guru99.com/wsdl-web-services-description-language.html) [eng]
