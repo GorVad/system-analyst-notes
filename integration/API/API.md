@@ -17,7 +17,8 @@ Also known as developer-facing or external, these APIs are available for any thi
 ## Remote Procedure Call (RPC)
 Web APIs may adhere to resource exchange principles based on a Remote Procedure Call. This protocol specifies the interaction between client-server based applications. One program (client) requests data or functionality from another program (server), located in another computer on a network, and the server sends the required response.
 ## Service Object Access Protocol (SOAP)
-SOAP is a lightweight protocol for exchanging structured information in a decentralized, distributed environment, according to the definition by Microsoft that developed it. Generally speaking, this specification contains the syntax rules for request and response messages sent by web applications. APIs that comply with the principles of SOAP enable XML messaging between systems through HTTP or Simple Mail Transfer Protocol (SMTP) for transferring mail.
+SOAP is a lightweight protocol for exchanging structured information in a decentralized, distributed environment, according to the definition by Microsoft that developed it. Generally speaking, this specification contains the syntax rules for request and response messages sent by web applications. APIs that comply with the principles of SOAP enable XML messaging between systems through HTTP or Simple Mail Transfer Protocol (SMTP) for transferring mail.  
+[Read more about SOAP](https://github.com/GorVad/system-data-analyst-notes/blob/main/integration/API/SOAP.md)
 ## Representational State Transfer (REST)
 The term REST was introduced by computer scientist Roy Fielding in a dissertation in 2000. Unlike SOAP, which is a protocol, REST is a software architectural style with six constraints for building applications that work over HTTP, often web services. The World Wide Web is the most common realization and application of this architecture style.
 ## gRPC

@@ -29,11 +29,11 @@ Only [XML](https://github.com/GorVad/system-data-analyst-notes/blob/main/markup/
 Web Services Description Language (WSDL) is an XML-based file that basically tells the client application what the web service does. The WSDL file is used to describe in a nutshell what the web service does and gives the client all the information required to connect to the web service and use all the functionality provided by the web service.
 
 ## WSDL Elements
-- **The <types>** tag is used to define all the complex datatypes, which will be used in the message exchanged between the client application and the web service. 
-- **The <messages> tag** is used to define the message which is exchanged between the client application and the web server. 
-- **The <portType> tag** is used to encapsulate every input and output message into one logical operation. 
-- **The <binding> tag** is used to bind the operation to the particular port type. This is so that when the client application calls the relevant port type, it will then be able to access the operations which are bound to this port type. Port types are just like interfaces. 
-- **The <service> tag** is a name given to the web service itself. Initially, when a client application makes a call to the web service, it will do by calling the name of the web service.  
+- **The types tag** is used to define all the complex datatypes, which will be used in the message exchanged between the client application and the web service. 
+- **The messages tag** is used to define the message which is exchanged between the client application and the web server. 
+- **The portType tag** is used to encapsulate every input and output message into one logical operation. 
+- **The binding tag** is used to bind the operation to the particular port type. This is so that when the client application calls the relevant port type, it will then be able to access the operations which are bound to this port type. Port types are just like interfaces. 
+- **The service tag** is a name given to the web service itself. Initially, when a client application makes a call to the web service, it will do by calling the name of the web service.  
 
 ## WSDL Example
 ````
