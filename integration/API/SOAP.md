@@ -101,8 +101,8 @@ Web Services Description Language (WSDL) is an XML-based file that basically tel
 
 ## Sources
 ### Web
-1. [W3School: SOAP](https://www.w3schools.com/xml/xml_soap.asp)
-2. [W3School: WSDL](https://www.w3schools.com/xml/xml_wsdl.asp)
+1. [W3School: SOAP](https://www.w3schools.com/xml/xml_soap.asp) [eng]
+2. [W3School: WSDL](https://www.w3schools.com/xml/xml_wsdl.asp) [eng]
 ### Articles
 1. [Guru99: What is SOAP?](https://www.guru99.com/soap-simple-object-access-protocol.html) [eng]
 2. [Guru99L WSDL](https://www.guru99.com/wsdl-web-services-description-language.html) [eng]
