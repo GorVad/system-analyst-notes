@@ -56,7 +56,7 @@ HTTPS is HTTP with encryption and verification. The only difference between the 
 ## Sources
 ### Web
 1. [Mozilla: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) [en/ru]
-2. [W3S: HTTP](https://www.w3schools.com/whatis/whatis_http.asp)
+2. [W3S: HTTP](https://www.w3schools.com/whatis/whatis_http.asp) [en]
 
 ### Article 
 1. [HTTP vs HTTPS](https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/#:~:text=HTTPS%20is%20HTTP%20with%20encryption,far%20more%20secure%20than%20HTTP.) [en]
