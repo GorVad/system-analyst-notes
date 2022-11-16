@@ -13,7 +13,7 @@ Partner APIs are openly promoted but shared with business partners who have sign
 ## Public APIs
 Also known as developer-facing or external, these APIs are available for any third-party developers. A public API program allows for increasing brand awareness and receiving an additional source of income when properly executed.
 
-# API specifications/protocols
+# API architecture styles
 ## Remote Procedure Call (RPC)
 Web APIs may adhere to resource exchange principles based on a Remote Procedure Call. This protocol specifies the interaction between client-server based applications. One program (client) requests data or functionality from another program (server), located in another computer on a network, and the server sends the required response.
 ## Service Object Access Protocol (SOAP)
