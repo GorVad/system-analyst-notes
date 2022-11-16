@@ -32,3 +32,4 @@ The need for faster feature development, more efficient data loading due to incr
 ## Articles
 1. [What is API: Definition, Types, Specifications, Documentation](https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/) [eng]
 2. [Что такое API?/ What is API?](https://aws.amazon.com/ru/what-is/api/) [eng/ru]
+3. [Сравнение архитектурных стилей API: SOAP vs REST vs GraphQL vs RPC](https://medium.com/nuances-of-programming/сравнение-архитектурных-стилей-api-soap-vs-rest-vs-graphql-vs-rpc-68855deb3f4)
