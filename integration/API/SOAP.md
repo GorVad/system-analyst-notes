@@ -3,10 +3,10 @@
 SOAP is an **XML-based** protocol for accessing web services **over HTTP**. It has some specification which could be used across all applications.
 
 ### Markup
-Only [XML](https://github.com/GorVad/system-data-analyst-notes/blob/main/markup/XML/XML.md)
+Only XML ([About XML](https://github.com/GorVad/system-data-analyst-notes/blob/main/markup/XML/XML.md))
 
 ### Protocols
-- HTTP
+- HTTP ([About HTTP](https://github.com/GorVad/system-data-analyst-notes/blob/main/integration/protocols/HTTP.md))
 - SMTP
 - TCP
 - FTP
