@@ -1,6 +1,8 @@
 /*
 For this kata we will be using the DVD Rental database.
-You are working for a company that wants to reward its top 10 customers with a free gift. You have been asked to generate a simple report that returns the top 10 customers by total amount spent ordered from highest to lowest. Total number of payments has also been requested.
+You are working for a company that wants to reward its top 10 customers with a free gift.
+You have been asked to generate a simple report that returns the top 10 customers by total amount spent ordered from highest to lowest.
+Total number of payments has also been requested.
 The query should output the following columns:
 customer_id [int4]
 email [varchar]
