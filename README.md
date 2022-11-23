@@ -24,3 +24,6 @@ The main idea is to create a unified knowledge base on the competencies of a sys
 7. [Архитектура ИТ-решений](https://t.me/it_arch)
 8. [Клуб анонимных аналитиков](https://t.me/analyst_club)
 9. [Журнал «Код»](https://t.me/thecodemedia)
+
+### YouTube
+1. [Поведение в кризисных ситуациях или что делать, если на приемке упал стенд](https://www.youtube.com/watch?v=Zx-H3UEZSb8)
