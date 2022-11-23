@@ -1,0 +1,381 @@
+openapi: 3.0.0
+
+info:
+  version: 1.0.0
+  title: Otus Sample API
+  description: Sample for OTUS
+
+paths:
+
+  /places:
+    parameters:
+      - $ref: '#/components/parameters/offsetParam'
+      - $ref: '#/components/parameters/limitParam'
+    get:
+      summary: UC-1. Просмотр списка ресторанов
+      description: >
+        Получение списка ресторанов с постраничной навигацией.
+        `TODO: добавить query-параметр для сортировки (asc|desc)`
+      tags:
+        - Поиск ресторана
+      operationId: getPlaces
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Place"
+  /places/{placeId}:
+    parameters:
+      - $ref: "#/components/parameters/placeId"
+    get:
+      summary: UC-2. Получить ресторан по ID
+      description: Получить указанный ресторан со всеми атрибутами.
+      tags:
+        - Поиск ресторана
+      operationId: getPlaceById
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Place"
+        "500":
+          description: Что-то пошло не так...
+          content:
+            text/html:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
+  /booking:
+    post:
+      summary: UC-5. Бронирование столика
+      description: Забронировать свободный столик.
+      tags:
+        - Бронирование столика
+      operationId: createBooking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingRequest'
+      responses:
+        "200":
+          description: "OK"
+        "500":
+          description: Что-то пошло не так...
+          content:
+            text/html:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
+  /booking/active:
+    parameters:
+      - $ref: "#/components/parameters/clientPhone"
+    get:
+      summary: UC-6. Просмотр своих активных бронирований
+      description: Получить список всех активных бронирований пользователя.
+      tags:
+        - Поиск бронирований
+      operationId: getActiveUserBooking
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+        "500":
+          description: Что-то пошло не так...
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ErrorMessage"
+  /booking/history:
+    parameters:
+      - $ref: "#/components/parameters/clientPhone"
+    get:
+      summary: UC-7. Просмотр истории своих бронирований
+      description: Получить историю бронирований для указанного пользователя.
+      tags:
+        - Поиск бронирований
+      operationId: getActiveUserBookingHistory
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Booking"
+        "500":
+          description: Что-то пошло не так...
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ErrorMessage"
+  /booking/{bookingId}:
+    parameters:
+      - $ref: "#/components/parameters/bookingId"
+    get:
+      summary: UC-8. Просмотр деталей бронирования
+      description: Просмотр деталей бронирования по идентификатору.
+      tags:
+        - Поиск бронирований
+      operationId: getBookingById
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Booking"
+        "500":
+          description: Что-то пошло не так...
+          content:
+            text/html:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
+  /booking/repeat/{bookingId}:
+    parameters:
+      - $ref: "#/components/parameters/bookingId"
+    post:
+      summary: UC-9. Повторное бронирование
+      description: Забронировать столик, который ранее уже был бронирован данным пользователем по уникальному идентификатору брони.
+      tags:
+        - Бронирование столика
+      operationId: repeatBooking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingRepeatRequest'
+      responses:
+        "200":
+          description: "OK"
+        "500":
+          description: Что-то пошло не так...
+          content:
+            text/html:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
+
+
+components:
+
+  parameters:
+
+    placeId:
+      description: Уникальный ID
+      name: placeId
+      in: path
+      required: true
+      schema:
+        type: integer
+    bookingId:
+      description: Уникальный ID бронирования
+      name: bookingId
+      in: path
+      required: true
+      schema:
+        type: integer
+    clientPhone:
+      description: Номер телефона, идентифицирующий клиента
+      name: clientPhone
+      in: query
+      required: true
+      schema:
+        type: string
+        pattern: '^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$'
+    offsetParam:
+      description: Номер первого элемента на странице
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+    limitParam:
+      description: Количество эолементов на странице
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 5
+        maximum: 100
+        default: 20
+
+  schemas:
+
+    Place:
+      type: object
+      required:
+        - id
+        - name
+        - image
+        - description
+        - raiting
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: false
+          minimum: 1
+          description: ID ресторана
+        name:
+          type: string
+          nullable: false
+          minLength: 2 # 2 <= name <= 150
+          maxLength: 150
+          description: Название ресторана
+        image:
+          type: string
+          nullable: false
+          minLength: 10
+          maxLength: 500
+          pattern: '/^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/'
+          description: Фото ресторана (URL)
+        description:
+          type: string
+          nullable: false
+          minLength: 50
+          maxLength: 2000
+          description: Описание ресторана
+        raiting:
+          type: string
+          nullable: false
+          enum: ["ужасно", "плохо", "нормально", "хорошо", "супер"]
+          description: Рейтинг ресторана
+        tables:
+          type: array
+          nullable: false
+          minItems: 1
+          maxItems: 500
+          items:
+            $ref: '#/components/schemas/Table'
+          description: Список столиков
+    Table:
+      type: object
+      required:
+        - id
+        - name
+        - isAvailable
+      properties:
+        id:
+          type: integer
+          format: int64
+          minimum: 1
+          nullable: false
+          description: Уникальный ID столика (сквозной идентификатор по всем ресторанам в системе)
+        name:
+          oneOf: #смешанный тип
+            - type: string
+            - type: integer
+          nullable: false
+          description: Название или номер столика в ресторане
+        isAvailable:
+          type: boolean
+          nullable: false
+          description: Доступность столика для бронирования
+    Booking:
+      type: object
+      required:
+        - datetime
+        - duration
+        - client
+        - table
+      properties:
+        datetime:
+          type: string
+          nullable: false
+          description: Время, на которое забронирован столик
+        duration:
+          type: integer
+          format: int64
+          minimum: 1
+          nullable: false
+          description: Длительность (в часах) брони указанного столика
+        client:
+          type: integer
+          format: int64
+          minimum: 1
+          nullable: false
+          description: Уникальный идентификатор клиента, забронировавшего столик
+        table:
+          type: integer
+          format: int64
+          minimum: 1
+          nullable: false
+          description: Уникальный идентификатор столика, который был забонирован
+    BookingRequest:
+      type: object
+      required:
+        - tableId
+        - dateTime
+        - phone
+      properties:
+        tableId:
+          type: integer
+          format: int64
+          minimum: 1
+          nullable: false
+          description: Уникальный ID столика
+        dateTime:
+          type: string
+          format: date-time
+          nullable: false
+          description: Дата и время бронирования
+        phone:
+          type: string
+          pattern: '^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$'
+          nullable: false
+          description: Контактный телефон гостя
+    BookingRepeatRequest:
+      type: object
+      required:
+        - bookingId
+        - dateTime
+      properties:
+        bookingId:
+          type: integer
+          format: int64
+          minimum: 1
+          nullable: false
+          description: Уникальный ID бронирования
+        dateTime:
+          type: string
+          format: date-time
+          nullable: false
+          description: Дата и время бронирования
+    ErrorMessage:
+      type: string
+      nullable: false
+      minLength: 10
+      maxLength: 500
+      description: >
+        Текст сообщения об ошибке
+        `TODO: сделать из строки объект с полями: сообщение на русском, сообщение на английском, уникальный ID ошибки для саппорта`
+    Schema:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/annvy/otus_sample_1/1
