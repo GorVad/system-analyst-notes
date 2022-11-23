@@ -1,4 +1,4 @@
-# system-analyst-notes
+# system-data-analyst-notes
 The main idea is to create a unified knowledge base on the competencies of a system analyst and a list of sources that will help develop or improve these skills
 
 ## About me
