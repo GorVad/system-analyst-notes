@@ -35,6 +35,10 @@ BEGIN
 END;  
 $$  
 ```
+Execute example:
+```
+SELECT * FROM GetEmployeeById(3)  
+```
 
 # Stored procedures
 To overcome the limitations of a function, PostgreSQL has a procedure that supports transactions. In the procedure, we can start, commit, rollback the transaction. However, the procedure can not return a result set like a table. It can only return the INOUT parameters.  
@@ -85,6 +89,10 @@ BEGIN
    Where Id = EmpId;  
 END  
 $$; 
+```
+Execute example:
+```
+CALL AddEmployee(null,'Peter Parker','1997-10-01','New York' ,'Web Developer','2020-11-01')  
 ```
 ## Sources
 1. [Proglib: Функции и хранимые процедуры в SQL: зачем нужны и как применять в реальных примерах](https://proglib.io/p/funkcii-i-hranimye-procedury-v-sql-zachem-nuzhny-i-kak-primenyat-v-realnyh-primerah-2022-10-07) [ru]
