@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: pgSQL
+    image: postgres
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+      PGDATA: /data/pgSQL
+    volumes:
+      - postgres:/data/pgSQL
+      - ./sql-ex-pg.sql:/docker-entrypoint-initdb.d/sql-ex-pg.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+networks:
+  postgres:
+    driver: bridge
+volumes:
+  postgres:
