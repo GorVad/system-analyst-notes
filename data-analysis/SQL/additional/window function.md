@@ -3,6 +3,19 @@ A window function is an SQL function where the input values are taken from a "wi
 Window functions are distinguished from other SQL functions by the presence of an OVER clause. If a function has an OVER clause, then it is a window function. If it lacks an OVER clause, then it is an ordinary aggregate or scalar function. Window functions might also have a FILTER clause in between the function and the OVER clause.
 
 # Syntax
+## WINDOW clause
+Named window-defn clauses may also be added to a SELECT statement using a WINDOW clause and then referred to by name within window function invocations
+The WINDOW clause, when one is present, comes after any HAVING clause and before any ORDER BY.
+
+Example:
+``````
+SELECT x, y, row_number() OVER win1, rank() OVER win2
+FROM t0
+WINDOW win1 AS (ORDER BY y RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW),
+       win2 AS (PARTITION BY y ORDER BY x)
+ORDER BY x;
+``````
+
 ## The PARTITION BY Clause
 For the purpose of computing window functions, the result set of a query is divided into one or more "partitions". A partition consists of all rows that have the same value for all terms of the PARTITION BY clause in the window-defn. If there is no PARTITION BY clause, then the entire result set of the query is a single partition. Window-function processing is performed separately for each partition.
 ### Example
