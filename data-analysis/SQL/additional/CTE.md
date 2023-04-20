@@ -1,7 +1,7 @@
-The WITH clause in SQL was introduced in standard SQL to 
-simplify complex long queries, especially those with JOINs and 
-subqueries. Often interchangeably called CTE or subquery refactoring, 
-a WITH clause defines a temporary data set whose output is available 
+The WITH clause in SQL was introduced in standard SQL to
+simplify complex long queries, especially those with JOINs and
+subqueries. Often interchangeably called CTE or subquery refactoring,
+a WITH clause defines a temporary data set whose output is available
 to be referenced in subsequent queries.
 
 Structure:
