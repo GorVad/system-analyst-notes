@@ -15,14 +15,14 @@ Only XML ([About XML](https://github.com/GorVad/system-data-analyst-notes/blob/m
 !**TBD:** Link to protocols!
 
 ## SOAP Building Blocks
-![img.png](https://github.com/GorVad/system-data-analyst-notes/blob/main/integration/API/API%20img/soap_blocks.png)
+![img.png](api-image/soap-blocks.png)
 
 ## SOAP Message Structure
 - The Envelope element
 - The header element and
 - The body element
 - The Fault element (Optional)
-![img.png](https://github.com/GorVad/system-data-analyst-notes/blob/main/integration/API/API%20img/soap_structure.png)
+![img.png](api-image/soap-structure.png)
 
 ## Message example
 **SOAP Message Embedded in HTTP Request**
