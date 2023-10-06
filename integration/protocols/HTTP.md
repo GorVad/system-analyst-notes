@@ -13,7 +13,7 @@ A blank line indicating all meta-information for the request has been sent.
 An optional body containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
 The start-line and HTTP headers of the HTTP message are collectively known as the head of the requests, whereas its payload is known as the body.
 
-![img.png](https://github.com/GorVad/system-data-analyst-notes/blob/main/integration/protocols/prorocols%20img/img.png)
+![img.png](protocols img/http-structure-image.png)
 
 ## HTTP request methods
 ### GET
