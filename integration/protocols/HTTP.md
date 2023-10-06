@@ -43,6 +43,21 @@ The TRACE method performs a message loop-back test along the path to the target 
 ### PATCH
 The PATCH method applies partial modifications to a resource.
 
+## Idempotence
+From a RESTful service standpoint, for an operation (or service call) to be idempotent, clients can make that same call repeatedly while producing the same result.
+Idempotent HTTP methods:
+1. GET
+2. PUT
+3. DELETE  
+   However, there is a caveat on DELETE. The problem with DELETE, which if successful would normally return a 200 (OK) or 204 (No Content), will often return a 404 (Not Found) on subsequent calls, unless the service is configured to "mark" resources for deletion without actually deleting them. However, when the service actually deletes the resource, the next call will not find the resource to delete it and return a 404. However, the state on the server is the same after each DELETE call, but the response is different.
+
+## Safe
+This means that these methods are only retrieving data:
+1. GET
+2. HEAD
+3. OPTIONS
+4. TRACE
+
 ## HTTP response status codes
 1. Informational responses (100 – 199)
 2. Successful responses (200 – 299)
