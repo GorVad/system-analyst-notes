@@ -114,7 +114,10 @@ _Example of usability requirements:
 The error rate of users submitting their payment details at the checkout page mustn’t exceed 10 percent._
 
 # What types of NFR affects on integration?
-!**TBU**
+1. **Performance**. Performance affects the speed to give a responce for the request. Also it provides more stable system: greater system performance give a lower chance for shutting down.
+2. **Reliability**. Reliability describes how likely the system will run out and won`t give a responce in time.
+3. **Scalability**. Scalability describes an opportunity to give optimal performance during higher load (for example system will have more requests) to provide responces at the same time.
+4. **Security**. Security affects the data transfer during integration. For example it is better to use POST (not GET) to transfer secure data inside body, in GET method data will be transfered in URL and everybody will have a chance to see it.
 
 # Sources
 1. [Alexsoft: NFR](https://www.altexsoft.com/blog/non-functional-requirements/)
