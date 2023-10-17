@@ -28,6 +28,9 @@ Besides Active Directory Domain Services, there are a handful of other critical 
 ## Lightweight Directory Services
 AD LDS is a Lightweight Directory Access Protocol (LDAP) directory service. It provides only a subset of the AD DS features, which makes it more versatile in terms of where it can be run. For example, it can be run as a stand-alone directory service without needing to be integrated with a full implementation of Active Directory.
 
+### LDAPS
+The LDAP is used to read from and write to Active Directory. By default, LDAP traffic is transmitted unsecured. You can make LDAP traffic confidential and secure by using SSL/Transport Layer Security (TLS) technology. You can enable LDAP over SSL (LDAPS) by installing a properly formatted certificate from either a Microsoft certification authority (CA) or a non-Microsoft CA according to the guidelines in this article.
+
 ## Certificate Services
 You can create, manage and share encryption certificates, which allow users to exchange information securely over the internet.
 
@@ -40,3 +43,4 @@ AD RMS is a set of tools that assists with the management of security technologi
 # Source
 1. [Lepide: What Is Active Directory and How Does It Work?](https://www.lepide.com/blog/what-is-active-directory-and-how-does-it-work/) [en]
 2. [Microsoft: Active Directory Domain Services Overview](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview) [en]
+3. [Microsoft: Enable LDAP over SSL with a third-party certification authority](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/enable-ldap-over-ssl-3rd-certification-authority)
