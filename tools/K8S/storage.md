@@ -23,3 +23,4 @@ While PersistentVolumeClaims allow a user to consume abstract storage resources,
 1. [Kubernetes: Volumes](https://kubernetes.io/docs/concepts/storage/volumes/) [en]
 2. [Kubernetes: Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) [en]
 3. [Edge Центр: PVC. Как создать и привязать к поду](https://support.edgecenter.ru/knowledge_base/item/289604) [ru]
+4. [Yandex: Том](https://cloud.yandex.ru/docs/managed-kubernetes/concepts/volume)
