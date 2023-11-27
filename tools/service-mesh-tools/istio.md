@@ -1,5 +1,6 @@
 # About
-Istio is a service mesh—a modernized service networking layer that provides a transparent and language-independent way to flexibly and easily automate application network functions. It is a popular solution for managing the different microservices that make up a cloud-native application. Istio service mesh also supports how those microservices communicate and share data with one another. (see also [Service Mesh](..\\integration\intergration-patterns\service-mesh.md))
+Istio is a service mesh—a modernized service networking layer that provides a transparent and language-independent way to flexibly and easily automate application network functions. It is a popular solution for managing the different microservices that make up a cloud-native application. Istio service mesh also supports how those microservices communicate and share data with one another. (see also [Service Mesh](..\\integration\intergration-patterns\service-mesh.md)).  
+Istio sidecar uses Envoy(see also [Envoy](\envoy.md)).
 
 # Benefits
 ## Achieve consistent service networking
